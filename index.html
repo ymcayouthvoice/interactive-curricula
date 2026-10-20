@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Youth in Government · Delegate Guides</title>
+<style>
+:root{--blue:#0060AF;--cyan:#00A5E0;--green:#6CB33F;--purple:#92278F;--ink:#1d2b3a;--bg:#fff;--card:#fff;--line:#d5dfea;--soft:#eef5fb;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 Verdana,Geneva,sans-serif}
+#bar{position:fixed;top:0;left:0;height:4px;background:var(--green);width:0;z-index:30}
+.top{max-width:900px;margin:0 auto;padding:22px 16px 14px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.logo{font-weight:bold;color:var(--blue);font-size:15px;line-height:1.2}.logo small{display:block;font-size:11px;letter-spacing:1px;color:var(--purple)}
+.tagl{font-size:10px;font-weight:bold;letter-spacing:.5px;color:var(--purple);line-height:1.4;text-align:right}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;gap:2px;overflow-x:auto;padding:4px 10px;justify-content:center}
+nav a{color:var(--blue);text-decoration:none;font-size:12px;font-weight:bold;padding:8px 12px;white-space:nowrap;border-bottom:3px solid transparent}
+nav a:hover{border-bottom-color:var(--green)}
+.hero{max-width:900px;margin:22px auto 0;padding:0 16px}
+.hero .in{background:var(--blue);color:#fff;border-radius:22px;padding:44px 32px 40px}
+.hero h1{font-size:clamp(30px,7vw,50px);margin:0 0 14px;line-height:1.05;letter-spacing:-.5px;text-transform:uppercase;padding-bottom:16px;border-bottom:2px solid #ffffff90}
+.hero p{max-width:560px;margin:0 0 22px;opacity:.95}
+.btn{background:#fff;color:var(--blue);border:0;border-radius:99px;padding:11px 24px;font:bold 14px Verdana;cursor:pointer;text-decoration:none;display:inline-block}
+main{max-width:900px;margin:0 auto;padding:0 16px 60px}
+section{margin-top:52px}
+h2{font-size:20px;margin:0 0 14px;color:#fff;background:var(--blue);border-radius:14px;padding:14px 22px;text-transform:uppercase;letter-spacing:.3px}
+h3{color:var(--blue);margin:22px 0 8px}
+.tag{display:block;color:var(--green);font-size:11px;font-weight:bold;letter-spacing:1.5px;margin-bottom:6px}
+.lead{margin:0 0 16px;font-size:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.mini{background:var(--soft);border-radius:10px;padding:14px;font-size:14px}
+.mini b{display:block;color:var(--blue);margin-bottom:2px}
+.tip{background:var(--soft);border-left:4px solid var(--green);border-radius:6px;padding:12px 14px;margin:12px 0;font-size:14px}
+.warn{border-left-color:var(--purple)}
+.think{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:8px;padding:14px 16px;margin:18px 0}
+.think::before{content:"THINK IT THROUGH";font-size:10px;font-weight:bold;letter-spacing:1.5px;color:var(--blue)}
+.think p{margin:4px 0 8px;font-weight:bold}
+textarea{width:100%;min-height:70px;border:1px solid var(--line);border-radius:6px;padding:10px;font:14px Verdana;background:var(--soft);color:var(--ink);resize:vertical}
+textarea:focus{outline:2px solid var(--cyan)}
+details{background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0;padding:0 14px}
+summary{cursor:pointer;padding:12px 0;font-weight:bold;color:var(--blue)}
+details>div{padding:0 0 12px;font-size:14px}
+.steps{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.steps button{flex:1;min-width:84px;border:1px solid var(--blue);background:var(--card);color:var(--blue);border-radius:8px;padding:9px 4px;font:bold 12px Verdana;cursor:pointer}
+.steps button.on{background:var(--blue);color:#fff}
+.funnel div{margin:6px auto;padding:12px;border-radius:8px;color:#fff;text-align:center;font-weight:bold;font-size:14px}
+table{border-collapse:collapse;width:100%;font-size:13px}td,th{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}th{background:var(--soft);color:var(--blue)}
+.tw{overflow-x:auto}
+.rate{display:flex;align-items:center;gap:10px;margin:8px 0;flex-wrap:wrap}.rate span{flex:1;min-width:170px;font-size:14px}.rate input{width:150px}
+.score{font-size:40px;font-weight:bold;color:var(--blue);text-align:center}
+.flip{background:var(--soft);border:1px solid var(--line);border-left:4px solid var(--cyan);border-radius:8px;padding:14px 16px;cursor:pointer;margin:8px 0;font-size:14px}
+.flip b{color:var(--blue)}.flip small{opacity:.7}.flip.back{border-left-color:var(--green)}
+.tl{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.tl div{flex:1;min-width:90px;border-radius:8px;padding:10px;color:#fff;text-align:center;font-size:12px}
+.tl b{display:block;font-size:20px}
+footer{background:var(--blue);color:#fff;text-align:center;font-size:12px;padding:24px 16px;line-height:1.8}
+
+:root{--blue:#0089D0;--cyan:#4FB3E3;--green:#5FA318;--purple:#1B2A41;--ink:#1B2A41;--bg:#fff;--card:#fff;--line:#E1E6EC;--soft:#F3F6F9;color-scheme:light}
+body{counter-reset:s;font-size:15px}
+.hero .in{border-radius:6px;padding:72px 44px 60px;background:#0089D0}
+.hero h1{font-size:clamp(34px,8vw,64px);letter-spacing:-1.5px;border-bottom:3px solid #fff;text-transform:none;font-weight:bold}
+.btn{border-radius:4px;color:#00669E}
+h2{background:none;color:var(--ink);padding:14px 0 0;border-radius:0;text-transform:none;font-size:32px;letter-spacing:-.5px;border-top:4px solid var(--green)}
+.tag{color:#3F7F00}
+section .tag::before{counter-increment:s;content:"0" counter(s) "  /  "}
+h3,summary,th,.mini b,.flip b{color:#00669E}
+nav a{color:var(--ink)}nav a:hover{border-bottom-color:var(--blue)}
+.card,.mini,details,.flip,.tip,.funnel div,.tl div,.steps button,.think{border-radius:6px}
+.mini{border:0;background:var(--soft)}
+.think{background:var(--soft);border:0;border-left:4px solid var(--blue)}
+.think::before{color:#00669E}
+textarea{background:#fff;border:1px solid #c9d3de}
+.tip{border-left-color:var(--green)}
+.score{color:#00669E}
+.steps button{border-color:#c9d3de;color:var(--ink)}.steps button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.logo{color:var(--ink)}.logo small{color:#00669E}
+.tagl{color:var(--ink)}
+footer{background:var(--ink)}
+details>div p{margin:0 0 12px}details>div h4{margin:18px 0 6px;color:#00669E;font-size:14px}details>div ul{margin:0 0 12px;padding-left:20px}details>div li{margin-bottom:6px}details[open]{border-color:#9ccbe6}details>div{max-width:68ch}
+.hero h1{text-transform:uppercase}.sub{font-size:20px;margin:-6px 0 14px;opacity:.95}
+ul,ol{padding-left:22px}li{margin-bottom:6px}
+.pick label{display:block;padding:8px 12px;margin:6px 0;border:1px solid var(--line);border-radius:6px;cursor:pointer;font-size:14px}
+.pick label.on{background:var(--soft);border-color:var(--blue)}
+.pick input{margin-right:8px}
+.ok{color:#3F7F00;font-weight:bold}.bad{color:#B3261E;font-weight:bold}
+.pyr{width:260px;max-width:100%;margin:12px auto;text-align:center;font-size:12px}
+.pyr div{background:var(--blue);color:#fff;padding:12px 6px;clip-path:polygon(0 0,100% 0,50% 100%);height:150px;position:relative}
+.q{display:block;width:100%;text-align:left}
+.stage{display:flex;flex-direction:column;gap:6px}.stage span{background:var(--soft);padding:8px 12px;border-radius:6px;font-weight:bold;color:#00669E}
+.inp{width:100%;border:1px solid #c9d3de;border-radius:6px;padding:9px;font:14px Verdana;margin:4px 0 10px;background:#fff;color:var(--ink)}
+.cnt{font-weight:bold;margin:6px 0}
+body{font-size:16px;line-height:1.8}
+main{max-width:760px}
+section{margin-top:72px}
+h2{font-size:34px;line-height:1.15;margin-bottom:18px}
+h3{font-size:20px;margin:36px 0 10px}
+h4{margin:22px 0 6px;color:#00669E;font-size:15px}
+p,li{max-width:68ch}
+p{margin:0 0 16px}
+li{margin-bottom:9px}
+.lead{font-size:17px;line-height:1.7}
+.card{padding:22px;margin:18px 0}
+details>div{font-size:15px}
+.short{background:#E8F4FB;border-left:4px solid #0089D0;border-radius:6px;padding:12px 16px;margin:0 0 22px;font-size:15px}
+.short b{display:block;font-size:11px;letter-spacing:1.5px;color:#00669E;text-transform:uppercase;margin-bottom:2px}
+.pyr2{max-width:420px;margin:18px auto}.pyr2 div{margin:6px auto;padding:14px;border-radius:6px;text-align:center;color:#fff;background:#0089D0;font-weight:bold;font-size:13px}.pyr2 small{display:block;font-weight:normal;opacity:.9;margin-top:2px}
+.tabset .panel>h3{margin-top:6px;font-size:18px}
+.arrow li b{color:#3F7F00;font-weight:bold}
+.steps button{font-size:13px}
+.pg{display:block;text-decoration:none;color:inherit;background:var(--soft);border-left:4px solid var(--blue);border-radius:6px;padding:16px 18px;margin:12px 0}.pg b{display:block;color:#00669E;font-size:17px}.pg span{font-size:14px}.soon{opacity:.6;border-left-color:#c9d3de}</style><link rel="stylesheet" href="guide-updates.css"></head><body><header class="top"><a class="logo brand" href="index.html" aria-label="YMCA Center for Youth Voice — guide homepage"><img src="assets/ymca-logo.jpg" alt="The Y — YMCA" width="1200" height="918"><span>CENTER FOR<br>YOUTH VOICE</span></a><div class="tagl"><span>For Youth Development</span><span>For Healthy Living</span><span>For Social Responsibility</span></div></header><div class="hero"><div class="in"><h1>Delegate Guides</h1><p>Pick your program area to open your guide.</p></div></div><main><section style="margin-top:36px"><a class="pg" href="nif-guide.html"><b>National Issues Forum</b><span>Research a national issue, write a proposal, and debate it.</span></a><a class="pg" href="legislature-guide.html"><b>Legislature</b><span>Write a bill, defend it in committee, and move it through both chambers.</span></a><a class="pg" href="lobbyist-guide.html"><b>Lobbyist</b><span>Choose a cause, write your agenda, and persuade legislators.</span></a><a class="pg" href="cabinet-guide.html"><b>Cabinet</b><span>Represent a state department and advise the Governor.</span></a><a class="pg" href="media-guide.html"><b>Media</b><span>Document Youth in Government as it happens.</span></a><a class="pg" href="appellate-courts-guide.html"><b>Appellate Courts</b><span>Court of Appeals and Supreme Court: argue both sides before judges.</span></a><a class="pg" href="leadership-corps-b-rev-2023.html"><b>Leadership Corps</b><span>Your first look at every program area, plus the Prep Kit survey (REV 08/2023).</span></a><a class="pg" href="leadership-corps-a-original.html"><b>Leadership Corps (original packet)</b><span>The earlier version of the Leadership Corps packet.</span></a><div class="pg soon"><b>Trial Courts</b><span>Coming soon.</span></div></section></main><footer>YMCA Center for Youth Voice · 1801 University Ave SE, Minneapolis MN 55414 · mnyig.org<br>FOR YOUTH DEVELOPMENT · HEALTHY LIVING · SOCIAL RESPONSIBILITY</footer><script src="proofread.js"></script></body></html>

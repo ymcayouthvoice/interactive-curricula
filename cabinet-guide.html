@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Cabinet · Delegate Guide</title>
+<style>
+:root{--blue:#0060AF;--cyan:#00A5E0;--green:#6CB33F;--purple:#92278F;--ink:#1d2b3a;--bg:#fff;--card:#fff;--line:#d5dfea;--soft:#eef5fb;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 Verdana,Geneva,sans-serif}
+#bar{position:fixed;top:0;left:0;height:4px;background:var(--green);width:0;z-index:30}
+.top{max-width:900px;margin:0 auto;padding:22px 16px 14px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.logo{font-weight:bold;color:var(--blue);font-size:15px;line-height:1.2}.logo small{display:block;font-size:11px;letter-spacing:1px;color:var(--purple)}
+.tagl{font-size:10px;font-weight:bold;letter-spacing:.5px;color:var(--purple);line-height:1.4;text-align:right}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;gap:2px;overflow-x:auto;padding:4px 10px;justify-content:center}
+nav a{color:var(--blue);text-decoration:none;font-size:12px;font-weight:bold;padding:8px 12px;white-space:nowrap;border-bottom:3px solid transparent}
+nav a:hover{border-bottom-color:var(--green)}
+.hero{max-width:900px;margin:22px auto 0;padding:0 16px}
+.hero .in{background:var(--blue);color:#fff;border-radius:22px;padding:44px 32px 40px}
+.hero h1{font-size:clamp(30px,7vw,50px);margin:0 0 14px;line-height:1.05;letter-spacing:-.5px;text-transform:uppercase;padding-bottom:16px;border-bottom:2px solid #ffffff90}
+.hero p{max-width:560px;margin:0 0 22px;opacity:.95}
+.btn{background:#fff;color:var(--blue);border:0;border-radius:99px;padding:11px 24px;font:bold 14px Verdana;cursor:pointer;text-decoration:none;display:inline-block}
+main{max-width:900px;margin:0 auto;padding:0 16px 60px}
+section{margin-top:52px}
+h2{font-size:20px;margin:0 0 14px;color:#fff;background:var(--blue);border-radius:14px;padding:14px 22px;text-transform:uppercase;letter-spacing:.3px}
+h3{color:var(--blue);margin:22px 0 8px}
+.tag{display:block;color:var(--green);font-size:11px;font-weight:bold;letter-spacing:1.5px;margin-bottom:6px}
+.lead{margin:0 0 16px;font-size:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.mini{background:var(--soft);border-radius:10px;padding:14px;font-size:14px}
+.mini b{display:block;color:var(--blue);margin-bottom:2px}
+.tip{background:var(--soft);border-left:4px solid var(--green);border-radius:6px;padding:12px 14px;margin:12px 0;font-size:14px}
+.warn{border-left-color:var(--purple)}
+.think{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:8px;padding:14px 16px;margin:18px 0}
+.think::before{content:"THINK IT THROUGH";font-size:10px;font-weight:bold;letter-spacing:1.5px;color:var(--blue)}
+.think p{margin:4px 0 8px;font-weight:bold}
+textarea{width:100%;min-height:70px;border:1px solid var(--line);border-radius:6px;padding:10px;font:14px Verdana;background:var(--soft);color:var(--ink);resize:vertical}
+textarea:focus{outline:2px solid var(--cyan)}
+details{background:var(--card);border:1px solid var(--line);border-radius:8px;margin:8px 0;padding:0 14px}
+summary{cursor:pointer;padding:12px 0;font-weight:bold;color:var(--blue)}
+details>div{padding:0 0 12px;font-size:14px}
+.steps{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.steps button{flex:1;min-width:84px;border:1px solid var(--blue);background:var(--card);color:var(--blue);border-radius:8px;padding:9px 4px;font:bold 12px Verdana;cursor:pointer}
+.steps button.on{background:var(--blue);color:#fff}
+.funnel div{margin:6px auto;padding:12px;border-radius:8px;color:#fff;text-align:center;font-weight:bold;font-size:14px}
+table{border-collapse:collapse;width:100%;font-size:13px}td,th{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}th{background:var(--soft);color:var(--blue)}
+.tw{overflow-x:auto}
+.rate{display:flex;align-items:center;gap:10px;margin:8px 0;flex-wrap:wrap}.rate span{flex:1;min-width:170px;font-size:14px}.rate input{width:150px}
+.score{font-size:40px;font-weight:bold;color:var(--blue);text-align:center}
+.flip{background:var(--soft);border:1px solid var(--line);border-left:4px solid var(--cyan);border-radius:8px;padding:14px 16px;cursor:pointer;margin:8px 0;font-size:14px}
+.flip b{color:var(--blue)}.flip small{opacity:.7}.flip.back{border-left-color:var(--green)}
+.tl{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.tl div{flex:1;min-width:90px;border-radius:8px;padding:10px;color:#fff;text-align:center;font-size:12px}
+.tl b{display:block;font-size:20px}
+footer{background:var(--blue);color:#fff;text-align:center;font-size:12px;padding:24px 16px;line-height:1.8}
+
+:root{--blue:#0089D0;--cyan:#4FB3E3;--green:#5FA318;--purple:#1B2A41;--ink:#1B2A41;--bg:#fff;--card:#fff;--line:#E1E6EC;--soft:#F3F6F9;color-scheme:light}
+body{counter-reset:s;font-size:15px}
+.hero .in{border-radius:6px;padding:72px 44px 60px;background:#0089D0}
+.hero h1{font-size:clamp(34px,8vw,64px);letter-spacing:-1.5px;border-bottom:3px solid #fff;text-transform:none;font-weight:bold}
+.btn{border-radius:4px;color:#00669E}
+h2{background:none;color:var(--ink);padding:14px 0 0;border-radius:0;text-transform:none;font-size:32px;letter-spacing:-.5px;border-top:4px solid var(--green)}
+.tag{color:#3F7F00}
+section .tag::before{counter-increment:s;content:"0" counter(s) "  /  "}
+h3,summary,th,.mini b,.flip b{color:#00669E}
+nav a{color:var(--ink)}nav a:hover{border-bottom-color:var(--blue)}
+.card,.mini,details,.flip,.tip,.funnel div,.tl div,.steps button,.think{border-radius:6px}
+.mini{border:0;background:var(--soft)}
+.think{background:var(--soft);border:0;border-left:4px solid var(--blue)}
+.think::before{color:#00669E}
+textarea{background:#fff;border:1px solid #c9d3de}
+.tip{border-left-color:var(--green)}
+.score{color:#00669E}
+.steps button{border-color:#c9d3de;color:var(--ink)}.steps button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.logo{color:var(--ink)}.logo small{color:#00669E}
+.tagl{color:var(--ink)}
+footer{background:var(--ink)}
+details>div p{margin:0 0 12px}details>div h4{margin:18px 0 6px;color:#00669E;font-size:14px}details>div ul{margin:0 0 12px;padding-left:20px}details>div li{margin-bottom:6px}details[open]{border-color:#9ccbe6}details>div{max-width:68ch}
+.hero h1{text-transform:uppercase}.sub{font-size:20px;margin:-6px 0 14px;opacity:.95}
+ul,ol{padding-left:22px}li{margin-bottom:6px}
+.pick label{display:block;padding:8px 12px;margin:6px 0;border:1px solid var(--line);border-radius:6px;cursor:pointer;font-size:14px}
+.pick label.on{background:var(--soft);border-color:var(--blue)}
+.pick input{margin-right:8px}
+.ok{color:#3F7F00;font-weight:bold}.bad{color:#B3261E;font-weight:bold}
+.pyr{width:260px;max-width:100%;margin:12px auto;text-align:center;font-size:12px}
+.pyr div{background:var(--blue);color:#fff;padding:12px 6px;clip-path:polygon(0 0,100% 0,50% 100%);height:150px;position:relative}
+.q{display:block;width:100%;text-align:left}
+.stage{display:flex;flex-direction:column;gap:6px}.stage span{background:var(--soft);padding:8px 12px;border-radius:6px;font-weight:bold;color:#00669E}
+.inp{width:100%;border:1px solid #c9d3de;border-radius:6px;padding:9px;font:14px Verdana;margin:4px 0 10px;background:#fff;color:var(--ink)}
+.cnt{font-weight:bold;margin:6px 0}
+body{font-size:16px;line-height:1.8}
+main{max-width:760px}
+section{margin-top:72px}
+h2{font-size:34px;line-height:1.15;margin-bottom:18px}
+h3{font-size:20px;margin:36px 0 10px}
+h4{margin:22px 0 6px;color:#00669E;font-size:15px}
+p,li{max-width:68ch}
+p{margin:0 0 16px}
+li{margin-bottom:9px}
+.lead{font-size:17px;line-height:1.7}
+.card{padding:22px;margin:18px 0}
+details>div{font-size:15px}
+.short{background:#E8F4FB;border-left:4px solid #0089D0;border-radius:6px;padding:12px 16px;margin:0 0 22px;font-size:15px}
+.short b{display:block;font-size:11px;letter-spacing:1.5px;color:#00669E;text-transform:uppercase;margin-bottom:2px}
+.pyr2{max-width:420px;margin:18px auto}.pyr2 div{margin:6px auto;padding:14px;border-radius:6px;text-align:center;color:#fff;background:#0089D0;font-weight:bold;font-size:13px}.pyr2 small{display:block;font-weight:normal;opacity:.9;margin-top:2px}
+.tabset .panel>h3{margin-top:6px;font-size:18px}
+.arrow li b{color:#3F7F00;font-weight:bold}
+.steps button{font-size:13px}
+.step{list-style:none;background:var(--soft);border-left:4px solid var(--blue);border-radius:6px;padding:12px 16px;margin:10px 0;font-size:15px}.step i{opacity:.75;font-size:13px}</style><link rel="stylesheet" href="guide-updates.css"></head>
+<body>
+<div id="bar"></div>
+<header class="top"><a class="logo brand" href="index.html" aria-label="YMCA Center for Youth Voice — guide homepage"><img src="assets/ymca-logo.jpg" alt="The Y — YMCA" width="1200" height="918"><span>CENTER FOR<br>YOUTH VOICE</span></a><div class="tagl"><span>For Youth Development</span><span>For Healthy Living</span><span>For Social Responsibility</span></div></header>
+<div class="hero"><div class="in"><h1>Cabinet</h1><p>Represent a state department, advise the Governor, and track the bills that matter. This is your delegate guide.</p><a class="btn" href="#mission">Get started</a></div></div>
+<nav id="nav"></nav>
+
+<main>
+
+<section id="mission"><span class="tag">START HERE</span><h2>Your Steps as a Cabinet Member</h2>
+<p class="lead">To represent the views, policies and proposals of a state department or agency at Youth in Government, serve as the Governor or Lt. Governor's liaison to the legislature, and monitor the process of bills.</p>
+<div class="card"><b>Things you will do as a Cabinet member</b><ul><li>Compose a Department Status Report containing information concerning the Department's current activities and overview of departmental goals and objectives</li><li>Meet all deadlines</li><li>Be aware of and informed of the responsibilities and duties of the position as Commissioner</li><li>Work with the Governor or Lt. Governor to review legislation, identify bills in the best interest of the state, and advocate on their behalf in committees and by lobbying legislators</li><li>Attend the LAUNCH training session in the fall</li><li>Adhere to the Code of Conduct</li></ul></div>
+<p>Along the way you will also have the chance to become a better speaker. And as an added benefit, you may even find out a little more about what is going on in the world around you! What more could you ask for?</p>
+<p>The Cabinet is the backbone of the Executive Branch and is the main support for the Governor and the Lt. Governor. As a cabinet member, you will serve as the Commissioner of a government department. In your role, you will create a report with information about your department and its legislative priorities and roles. With the rest of the members of the cabinet, you will serve as the main advisors and representatives of the Governor and Lt. Governor.</p>
+<div class="think"><p>Which of the six departments interests you most, and what is one problem in that area you'd want the Governor to hear about?</p><textarea data-k="c1"></textarea></div></section>
+
+<section id="what"><span class="tag">THE TEAM</span><h2>What is the Cabinet?</h2>
+<div class="short"><b>In short</b>You advise the Governor, write a report on your department, and testify on bills.</div>
+<p>The Cabinet is made up of the Youth Governor, Lt. Governor, and all Commissioners from the various departments:</p>
+<ul><li>Corrections</li><li>Education</li><li>Finance &amp; Commerce</li><li>Health &amp; Human Services</li><li>Natural Resources</li><li>Transportation</li></ul>
+<p>The Chief of Staff chairs all Cabinet meetings. As a Cabinet member, you debate and advise the Youth Governor or Lt. Governor on legislative and administrative questions. You also provide written positions on the current status of your department, based upon actual information obtained from the respective state departments. Finally, you provide your opinions in writing on any legislation currently under consideration, which may affect your department.</p>
+<div class="card"><b>As a Cabinet Member you also testify in committee representing two roles:</b><ol><li>As the chief, informed representative of your department, or;</li><li>As requested on the behalf of the Governor, Lt. Governor, or the department.</li></ol></div>
+<h3>Cabinet procedures</h3>
+<p>Upon assignment by the Governor or Lt. Governor, each cabinet member shall be responsible for writing a summary of their department's current status. To aid each cabinet member in fulfilling this task, a portfolio of basic information and resources for each department will be provided at LAUNCH. Using information about the real state departments, each cabinet member writes a summary status report. The result should be cabinet members who are well informed of their department's status and needs. The overall goal is to create a cabinet of informed advisors to the Youth Governor and Lt. Governor who are able to provide expert testimony in legislative committees, identify needed legislation and act accordingly.</p>
+<h3>Cabinet department descriptions, and the committees each one monitors</h3>
+<p>Each department is responsible for monitoring bills from the committees listed. Each committee name is followed by the two chambers it feeds.</p>
+<div class="tabset">
+<div class="panel" data-title="Corrections"><h3>Department of Corrections</h3><p>The Department of Corrections represents the Governor &amp; Lt. Governor with respect to legislation concerning the criminal code, sentencing, and law enforcement. The department also operates the state's adult correctional institutions (prisons) and juvenile facilities and provides probation, parole, and supervised release services. In addition, the department provides services and assistance to crime victims.</p><h4>Committees it monitors</h4><ul><li>Government Operations (Sandford/Knutson)</li><li>Government Affairs (Humphrey/Stassen)</li><li>Government Administration (Sibley/Ramsey)</li></ul></div>
+<div class="panel" data-title="Education"><h3>Department of Education</h3><p>The Department of Education provides leadership for public elementary and secondary education programs; encourages state legislation, rules and policies which promote an educational climate that serves all citizens; and ensures that information on the requirements and leadership of the state are interpreted and disseminated to local and regional educational officials.</p><h4>Committees it monitors</h4><ul><li>Education Development (Sandford/Knutson)</li><li>Education Services (Humphrey/Stassen)</li><li>Education Finance (Sibley/Ramsey)</li></ul></div>
+<div class="panel" data-title="Finance & Commerce"><h3>Department of Finance &amp; Commerce</h3><p>The Department of Finance &amp; Commerce plans, analyzes, and manages the budget, financial operations and, debt of the state. The department forecasts revenue, controls expenditures per law, and reports financial information for the Governor, legislature, and the public on the operation, financial condition, and economic future of the state. The department also works in partnership with communities to augment local economic development efforts. The department does this by providing financial assistance analysis to help communities diversify their economies and fill the gaps in the marketplace.</p><h4>Committees it monitors</h4><ul><li>Commerce (Sandford/Knutson)</li><li>Consumer Affairs (Humphrey/Stassen)</li><li>Economic Development (Sibley/Ramsey)</li></ul></div>
+<div class="panel" data-title="Health & Human Services"><h3>Department of Health &amp; Human Services</h3><p>The Department of Health &amp; Human Services is responsible for developing and maintaining an organized system of programs and services for protecting, maintaining, and improving the health of the citizens of Minnesota. The department is responsible for developing programs that provide emergency services and care to low-income persons, social services to families, and rehabilitative services to the mentally ill, chemically dependent, and physically handicapped.</p><h4>Committees it monitors</h4><ul><li>Human Services (Sandford/Knutson)</li><li>Family Services (Humphrey/Stassen)</li><li>Social Services (Sibley/Ramsey)</li></ul></div>
+<div class="panel" data-title="Natural Resources"><h3>Department of Natural Resources</h3><p>The Department of Natural Resources is responsible for establishing water and air quality standards and making recommendations on solid waste disposal and land use. The department also is responsible for regulating noise pollution and toxic/hazardous waste. The department has authority over all public lands, parks, timber, waters, minerals, and wildlife and their use, sale, leasing, or other disposition. In addition, the department is responsible for encouraging programs promoting the safe use of watercraft and firearms.</p><h4>Committees it monitors</h4><ul><li>Forests, Wetlands, &amp; Wildlife (Sandford/Knutson)</li><li>Ecology (Humphrey/Stassen)</li><li>Natural Resources (Sibley/Ramsey)</li></ul></div>
+<div class="panel" data-title="Transportation"><h3>Department of Transportation</h3><p>The Department of Transportation seeks to provide a balanced transportation system for Minnesota. It develops and implements policies, plans, and programs for aeronautics, highways, motor carriers, ports, public transport, and railroads.</p><h4>Committees it monitors</h4><ul><li>Transportation (Sandford/Knutson)</li><li>State Infrastructure (Humphrey/Stassen)</li><li>Public Transit (Sibley/Ramsey)</li></ul></div>
+</div></section>
+
+<section id="report"><span class="tag">YOUR ASSIGNMENT</span><h2>Writing Your Status Report</h2>
+<div class="short"><b>In short</b>Research your department, draft your report in the five parts below, get feedback, then submit on Airtable and FINALIZE it.</div>
+<p>As a Commissioner for your assigned department, you will represent the Governor or Lt. Governor with respect to legislation falling within your department area. You are requested to write a report on your assigned state department. This report is meant to give the Youth Governor &amp; Youth Lt. Governor an appreciation for your department and the constituency you represent. Please refer to the sample report below. You may also use any materials you receive at the fall LAUNCH training. If you have any questions, please do not hesitate to contact the Youth Governor or the Center for Youth Voice State Office.</p>
+<p>Additionally, feel free to contact your real-life counterpart's office for more information on your specific department. Many Youth Commissioners have had an opportunity to meet with the adult Commissioners or their staff and have been able to maintain contact during the Youth in Government conference.</p>
+<p>Use the appropriate web address below to research the background on your assigned department. The websites for each department will give you all the information you need to summarize the outline, structure and work of your department in your Status Report.</p>
+<div class="card"><b>Department websites</b><ul><li>Department of Corrections: www.doc.state.mn.us</li><li>Department of Education: www.children.state.mn.us</li><li>Department of Finance &amp; Commerce: www.finance.state.mn.us</li><li>Department of Health and Human Services (combining two MN departments for YIG)<ul><li>MN Dept. of Health: www.health.state.mn.us</li><li>MN Dept. of Human Services: www.dhs.state.mn.us</li></ul></li><li>Department of Natural Resources: www.dnr.state.mn.us</li><li>Department of State Planning: www.mnplan.state.mn.us</li><li>Department of Transportation: www.dot.state.mn.us</li></ul></div>
+<h3>Submitting your status report</h3>
+<p>It is recommended that you prepare a draft of your Status Report in order to make it easier to get feedback from peers and leaders. Compose your Status Report in your word processing program of choice, referencing the template below. Once you have completed your first draft, pass it along to some peers, your Delegation Director, and/or your advisors. Ask them to edit it and give you feedback. The more people who can read your Status Report and give you suggestions, the clearer it will be for Youth in Government!</p>
+<p>After getting feedback on a draft Status Report, you should write your final draft and submit it on Airtable. You have been assigned a template on Airtable. The template will have a variety of text boxes. Copy the content, section-by-section, from your text document and paste it into each corresponding text box.</p>
+<p>Airtable has the capabilities for back-and-forth editing. It is possible for a Status Report to be reviewed by your Delegation Director and you may be given additional instructions/conditions to fulfill before the Status Report can be submitted to the State Office for distribution to the Youth Governor/Lt. Governor.</p>
+<p>Make sure you get your Status Report submitted before the posted deadline, so your Delegation Director can review and make suggestions for final improvements. Please be prompt in completing your Status Report so you and the Youth Governor/Lt. Governor can be well-prepared for Youth in Government. Plan ahead in case of technical difficulties.</p>
+<div class="tip warn"><b>IF YOU DO NOT 'FINALIZE' YOUR STATUS REPORT AND SEND IT TO YOUR DELEGATION DIRECTOR, IT WILL NOT MAKE IT TO THE GOVERNOR/LT. GOVERNOR.</b> Please take care that you fully complete the process.</div>
+<p>It is strongly encouraged that you bring a printed and digital version of your Status Report with you to Youth in Government, just in case something goes wrong.</p>
+<h3>Status report template</h3>
+<div class="card"><div style="text-align:center"><b>MINNESOTA YMCA YOUTH IN GOVERNMENT<br>CABINET STATUS REPORT</b></div><div id="sr"></div></div></section>
+
+<section id="conf"><span class="tag">GAME DAY</span><h2>At the Conference</h2>
+<div class="short"><b>In short</b>Meet the Governor daily, file a daily report, track your bills, and testify in committee.</div>
+<h3>Daily meetings</h3><p>At Youth in Government, Cabinet members will meet with the Governor or Lt. Governor on a daily basis. Among other things, the meeting will address the Executive Branch legislative agenda and the progress of important legislation. When not meeting with the Governor or Lt. Governor, Cabinet members attend committee and chamber meetings to advocate the Governor &amp; Lt. Governor's legislative agenda and to monitor legislative activity.</p>
+<h3>Daily reports</h3><p>Every Cabinet member must submit a Cabinet Daily Report each day during Youth in Government. The report summarizes recent legislative activity and allows the Governor and Lt. Governor to track key legislation.</p>
+<div class="card"><b>Cabinet Daily Report</b><div id="dr"></div></div>
+<h3>Legislative opinion</h3><p>In addition, the Governor or Lt. Governor may ask a Cabinet member to prepare a Cabinet Legislative Opinion regarding an important issue or topic. The Governor may endorse and adopt the Cabinet member's opinion.</p>
+<div class="card"><b>Cabinet Legislative Opinion</b><div id="lo"></div><p style="font-size:14px;margin-top:10px"><b>ENDORSEMENT.</b> The Youth Governor or Lt. Governor of the State of Minnesota hereby endorses the above opinion of the member of the Cabinet by which it was written. This endorsement entails the adoption of the opinion above as the position of the Youth Governor or Lt. Governor on the issue/topic listed above.<br>Youth Governor or Lt. Governor: ____________________</p></div>
+<h3>Advocacy</h3><p>During Youth in Government, cabinet members will be able to speak freely on their department's behalf. They will be able to advocate legislation which is identified in the best interest of the state (with the Governor or Lt. Governor's approval). Finally, they are at the disposal of the Governor or Lt. Governor to receive specific legislative assignments and must file daily reports with the Governor or Lt. Governor concerning their daily activities.</p>
+<h3>Tracking bills</h3><p>Each department is responsible for monitoring bills from certain legislative committees. Each Commissioner in turn, is assigned to track certain bills from one of these committees through the entire legislative process; from introduction in committee to approval by the Humphrey House/Stassen Senate, Sibley House/Ramsey Senate, or Sanford House/Knutson Senate to consideration by the Governor or Lt. Governor.</p>
+<h3>Committees</h3><p>All bills begin in committee, so you will need to know which bills are priorities for the state, the Governor, and the Lieutenant Governor. Along with the author of the legislation, you will have an opportunity to speak on behalf of or against legislation in committee. Each committee will have a chair and vice-chair that will run the show. It's the committee's job to look at all the bills that fall under their subject, debate them, and decide which ones will Pass and be discussed on the House or Senate floor, and which ones will Fail and go to the great hopper in the sky. It is your job to provide testimony and give information as requested.</p>
+<h3>Testifying in committee</h3>
+<p>In order to testify to the committee, you'll need to be present when testimony is asked for. Use the following language when testifying:</p>
+<ul><li>Chair and members of the committee…..</li><li>My name is</li><li>I represent</li><li>I would like to testify for/in opposition to bill number</li><li>The Governor and Lieutenant Governor supports (or opposes) this bill for the following reasons:<ul><li>1.</li><li>2.</li><li>3.</li></ul></li><li>You might give legislators an example / story of what might happen if this bill passes or fails.</li><li>Repeat to the committee whether you want them to vote Yes or No on the bill</li><li>Thank you for your time!</li></ul>
+<div class="card"><b>Build your testimony</b> <span style="font-size:13px">(it writes itself as you type)</span><div id="tb"></div></div></section>
+
+<section id="script"><span class="tag">WHAT YOU'LL SEE</span><h2>Committee Script</h2>
+<p class="lead">Here's an example of what a committee meeting will look like: Minnesota YMCA Youth in Government Legislative Committee Procedures.</p>
+<ol class="sc" style="list-style:none;padding:0">
+<li class="step"><b>1 · Call to order</b> <i>(Committee Chair)</i><br>"THE COMMITTEE WILL NOW COME TO ORDER."</li>
+<li class="step"><b>2 · Introductions</b> <i>(Committee Chair)</i><br>Introduces self, Vice Chair, Clerk, Advisors, resource people, etc.</li>
+<li class="step"><b>3 · Chair requests that the Clerk take roll</b> <i>(Chair &amp; Clerk)</i><br>Clerk must take roll each day to record those members present. A motion to suspend with the roll call is not in order. "THE CLERK WILL TAKE THE ROLL."</li>
+<li class="step"><b>4 · Chair explains committee procedure and posts the bill priority list/schedule and time that each bill will be heard</b> <i>(Committee Chair)</i><br>To inform authors of schedule; review the rules and the order of business.</li>
+<li class="step"><b>5 · Practice bill is presented</b> <i>(Committee Chair &amp; Assistants)</i><br>A bill not in that committee is presented and used as a warm-up bill.</li>
+<li class="step"><b>6 · Regular order of business</b></li>
+<li class="step"><b>7 · Consideration of bills as prioritized</b> <i>(Committee Chair/Committee Clerk)</i><br>Chair announces each as it comes up and recognizes the author for a short presentation of two minutes. "THE NEXT BILL UNDER CONSIDERATION IS __________ HOUSE/ ____________ SENATE FILE #________. IS THE AUTHOR PRESENT?"</li>
+<li class="step"><b>7 · Testimony</b> <i>(Lobbyists, Cabinet, the General Public)</i><br>After the author has made their presentation, the Chair will ask if anyone present would like to testify on the bill. This may include lobbyists, cabinet officials, or the public. Only members of the committee may ask questions. Questions may be asked of any person testifying before the committee, either during or after their presentation.</li>
+<li class="step"><b>8 · Debate and discussion</b> <i>(Committee Members)</i><br>After the testimony has been taken, the floor is open to the committee to debate and discuss the bill. Questions may be asked of those who testified.</li>
+<li class="step"><b>9 · Motion to pass bill</b> <i>(Committee Members)</i><br>When the allocated time has elapsed, any member of the committee may move that the bill be recommended to pass. "I MOVE THAT __________ HOUSE/__________ SENATE FILE #_____ BE RECOMMENDED TO PASS (AS AMENDED)."<br>If a bill is considered to be of a non-controversial nature it may be moved to pass and be placed on the Consent Calendar. "I MOVE THAT _________ HOUSE/___________ SENATE FILE #_____ BE RECOMMENDED TO PASS AND BE PLACED ON THE CONSENT CALENDAR."</li>
+<li class="step"><b>10 · Chair handles motion</b> <i>(Committee Chair)</i><br>"IT HAS BEEN MOVED THAT ___________ HOUSE/___________ SENATE FILE #________ BE RECOMMENDED TO PASS (AS AMENDED). ALL THOSE IN FAVOR PLEASE SIGNIFY BY SAYING 'AYE'. THOSE OPPOSED SIGNIFY BY SAYING 'NO'. THE MOTION PREVAILS (DOES NOT PREVAIL)." A hand vote shall be taken on all votes in committee for final passage.</li>
+<li class="step"><b>11 · Bill forwarded to Secretary of State</b> <i>(Clerk &amp; Chair)</i><br>Bill should be grouped by House &amp; Senate and sent to the Secretary of State's office with the proper transmittal sheet attached.</li>
+<li class="step"><b>12 · Committee reports forwarded to Secretary of State</b> <i>(Clerk &amp; Chair)</i><br>Separate Committee Reports should be prepared for the House and the Senate and must be forwarded to the Secretary of State's Office immediately when the committee has recessed for the day!</li></ol>
+<div class="card"><ul><li>Remember to send the first two passed bills to the Secretary of State's Office immediately during the first committee meeting. During subsequent committee sessions, save up 4 to 5 bills and then send them to the Secretary of State's Office.</li><li>Committee Reports must be turned in to the Secretary of State's Office immediately when the committee has finished its hearings for the day. The proceedings of the Houses and Senates cannot happen without these reports. The Secretary of State's Office has to turn these forms around very quickly, so the sooner you can turn in these reports, the better.</li></ul></div>
+<div class="think"><p>You're about to testify against a bill that hurts your department. Write your three strongest reasons, then the short story you'd tell the committee.</p><textarea data-k="c2" style="min-height:120px"></textarea></div></section>
+
+<section id="next"><span class="tag">WHAT'S NEXT</span><h2>Next Year</h2>
+<p class="lead">Before you pack up the daily reports and bill tracking forms, you should think about next year and what you might want to do.</p>
+<div class="tabset">
+<div class="panel" data-title="Lobbyist"><h3>If you really enjoyed getting legislation passed... You may want to consider being a Lobbyist.</h3><p>A lobbyist is the person behind the scenes who pushes the legislative process. You probably had some experience with them in committees or debate this year, and hopefully you got to talk to your own teammates. Lobbyists represent clients, and they try and get certain bills to pass or fail depending on how it affects their client's interests. You can use all your debating and negotiating skills to convince legislators to think your way one-on-one, or you can organize campaigns about legislation to reach whole groups. Your primary focus is still legislation and you also get to use your debating skills. If you like networking, have a cause you believe in passionately, and love to convince others to join your cause, being a lobbyist might be right for you!</p></div>
+<div class="panel" data-title="Court"><h3>If you like the debating and public speaking... You may want to consider being in the Court Program.</h3><p>The Court program gives you a lot of time to debate (our fancy word for arguing!). As an attorney, you represent one side of a case and try to convince a panel of judges that your arguments are better than the other side's. If you become a judge, you get to listen to the arguments of others and poke holes in them with your piercingly intelligent questions. It's all about the debate!</p></div>
+<div class="panel" data-title="National Issues Forum"><h3>If you liked seeing laws get made, but you're interested in debating national issues... You may want to consider being in the National Issues Forum.</h3><p>Like the legislature, the National Issues Forum debates and discusses issues, and members work to pass proposals through. However, the National Issue Forum focuses on issues related to the federal government, while the legislature works on state issues.</p></div>
+<div class="panel" data-title="Legislator"><h3>If you really enjoyed the process of making laws... You may want to consider being a Legislator.</h3><p>Legislators are the people who are in the forefront of the legislative process. They represent the people of the state and try to come up with ways that the government can serve them better; they make, change or get rid of laws. You get a chance to come up with your own good ideas for legislation and use all your debating skills to get your bills passed. Your primary focus is still legislation, but you get to speak and debate in groups more, like on the floor of the house and in committee. If you like coming up with new ideas, enjoy debating and speaking in public and want to improve our society, being a legislator may be right for you!</p></div>
+<div class="panel" data-title="Officer"><h3>If you loved being a part of leadership of Youth in Government... You may want to become an Elected Officer or Appointed Official.</h3><p><b>Youth Officers (Grades 9-12):</b> Officers for the program are elected by participants in each program area at Youth in Government, to take office at the conclusion of the conference and complete their leadership the following January. Youth Officers preside in the program areas during YIG.</p><p><b>Appointed Officials (Grades 9-12):</b> Shortly after Youth in Government, the newly elected Youth Officers appoint delegates to assist in the leadership of their program area. Some appointed positions include: Floor Leaders, Committee Chairs, Administrators, Press Secretaries, and Presiding Judges/Justices.</p></div></div>
+<div class="think"><p>Which path calls to you, and what's one thing you could do this year to get ready?</p><textarea data-k="c3"></textarea></div></section>
+</main>
+<footer>YMCA Center for Youth Voice · 1801 University Ave SE, Minneapolis MN 55414 · mnyig.org<br>FOR YOUTH DEVELOPMENT · HEALTHY LIVING · SOCIAL RESPONSIBILITY</footer>
+<script>
+const $=s=>document.querySelector(s);
+const nav=[["mission","Mission"],["what","Cabinet"],["report","Status Report"],["conf","Conference"],["script","Committee Script"],["next","Next"]];
+$("#nav").innerHTML=nav.map(n=>`<a href="#${n[0]}">${n[1]}</a>`).join("");
+function bind(){document.querySelectorAll("[data-k]").forEach(t=>{try{t.value=localStorage.getItem("cab_"+t.dataset.k)||""}catch(e){}t.addEventListener("input",()=>{try{localStorage.setItem("cab_"+t.dataset.k,t.value)}catch(e){}})})}
+function copy(txt,btn){const done=()=>{const o=btn.textContent;btn.textContent="Copied. Paste it into Airtable.";setTimeout(()=>btn.textContent=o,2500)};try{navigator.clipboard.writeText(txt).then(done,fb)}catch(e){fb()}function fb(){const t=document.createElement("textarea");t.value=txt;document.body.append(t);t.select();try{document.execCommand("copy");done()}catch(e){}t.remove()}}
+function form(id,key,fields,title){const el=$(id);el.innerHTML=fields.map(f=>`<label style="font-size:13px;font-weight:bold">${f[0]}</label>${f[2]?`<textarea data-k="${key}_${f[1]}" style="min-height:${f[2]}px"></textarea>`:`<input class="inp" data-k="${key}_${f[1]}">`}`).join("")+`<button class="btn" style="background:var(--blue);color:#fff;margin-top:6px">Copy my ${title}</button>`;el.querySelector("button").onclick=e=>{const v=k=>(el.querySelector(`[data-k="${key}_${k}"]`).value||"").trim();copy(title.toUpperCase()+"\n\n"+fields.map(f=>f[0]+": "+v(f[1])).join("\n\n"),e.target)}}
+form("#sr","sr",[["The Department of","dept"],["Delegate name","name"],["Delegation","del"],["I. DEPARTMENT STRUCTURE","s1",110],["II. DEPARTMENT GOALS","s2",110],["III. CURRENT DEPARTMENT STATUS","s3",110],["IV. RECENT CRISIS SITUATIONS","s4",110],["V. CONCLUSIONS AND RECOMMENDATIONS","s5",110]],"Cabinet Status Report");
+form("#dr","dr",[["Department","dept"],["Date","date"],["Filed by","by"],["COMMITTEE ACTIVITY: Committee(s)","com"],["Bills passed in committee","bp",60],["Bills defeated in committee","bd",60],["Comments","cc",60],["CHAMBER ACTION: Legislature(s)","leg"],["Bills passed in House","hp",60],["Bills defeated in House","hd",60],["Bills passed in Senate","sp",60],["Bills defeated in Senate","sd",60],["COMMISSIONER COMMENTS TO GOVERNOR/LT. GOVERNOR","gc",80]],"Cabinet Daily Report");
+form("#lo","lo",[["Department","dept"],["Date","date"],["Filed by","by"],["ISSUE/TOPIC","topic"],["Requested by","req"],["OPINION OF THE CABINET MEMBER","op",140]],"Cabinet Legislative Opinion");
+(function(){const f=[["Bill number","bill"],["Your name","name"],["You represent","rep"],["Testify for or in opposition","pos"],["Reason 1","r1"],["Reason 2","r2"],["Reason 3","r3"],["A short example or story","story",60]];const el=$("#tb");el.innerHTML=f.map(x=>`<label style="font-size:13px;font-weight:bold">${x[0]}</label>${x[2]?`<textarea data-k="tb_${x[1]}" style="min-height:${x[2]}px"></textarea>`:`<input class="inp" data-k="tb_${x[1]}">`}`).join("")+'<pre id="tbo" style="white-space:pre-wrap;background:var(--soft);padding:12px;border-radius:6px;font:13px Verdana"></pre>';const v=k=>(el.querySelector(`[data-k="tb_${k}"]`).value||"").trim()||"____";const up=()=>{$("#tbo").textContent=`Chair and members of the committee...\nMy name is ${v("name")}.\nI represent ${v("rep")}.\nI would like to testify ${v("pos")} bill number ${v("bill")}.\nThe Governor and Lieutenant Governor support (or oppose) this bill for the following reasons:\n1. ${v("r1")}\n2. ${v("r2")}\n3. ${v("r3")}\n${v("story")}\nI ask that you vote Yes (or No) on this bill.\nThank you for your time!`};el.addEventListener("input",up);up()})();
+bind();
+document.querySelectorAll("#tb [data-k]").forEach(t=>t.dispatchEvent(new Event("input",{bubbles:true})));
+document.querySelectorAll(".tabset").forEach(ts=>{const ps=[...ts.querySelectorAll(":scope>.panel")];const bar=document.createElement("div");bar.className="steps";ps.forEach((p,i)=>{const b=document.createElement("button");b.textContent=p.dataset.title;b.onclick=()=>{ps.forEach((x,j)=>{x.style.display=i==j?"block":"none"});[...bar.children].forEach((c,j)=>c.classList.toggle("on",i==j))};bar.append(b)});ts.prepend(bar);bar.children[0].click()});
+addEventListener("scroll",()=>{$("#bar").style.width=(scrollY/(document.body.scrollHeight-innerHeight)*100)+"%"});
+</script><script src="guide-responses.js"></script><script src="proofread.js"></script></body></html>
